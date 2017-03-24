@@ -47,9 +47,11 @@ modindex_exclude
 sometimes you may want to exclude entire module(s) at once. Even if
 you wrap an entire module description in "only" directive, like:
 
+::
+
     .. only: option1
         .. module:: my_module
-    
+
         ...
 
 You will still have an HTML page generated, albeit empty. It may also
@@ -115,6 +117,8 @@ any project updates manually then).
 Add following lines to "extensions" settings in your conf.py (you
 likely already have some standard Sphinx extensions enabled):
 
+::
+
     extensions = [
         ...
         'sphinx_selective_exclude.eager_only',
@@ -130,6 +134,8 @@ you rebuild documentation with another builder (i.e. with different output
 format). Also, to stay on safe side, it's recommended to remove old doctree
 anyway before generating production-ready documentation for publishing. To
 do that, run something like:
+
+::
 
     rm -rf _build/doctrees/
 
